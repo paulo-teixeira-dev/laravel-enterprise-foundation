@@ -6,6 +6,10 @@ services:
       context: ./
       dockerfile: docker/php/php.dockerfile
     restart: always
+    environment:
+      ORACLE_HOME: /opt/oracle/instantclient
+      LD_LIBRARY_PATH: /opt/oracle/instantclient
+      TNS_ADMIN: /opt/oracle/instantclient/network/admin
     volumes:
       - ./src/:/var/www
     networks: 
