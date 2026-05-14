@@ -47,7 +47,7 @@ RUN docker-php-ext-install pdo pdo_pgsql mbstring zip
 RUN echo "instantclient,/usr/lib/oracle/21/client64/lib" | pecl install oci8 \
     && docker-php-ext-enable oci8
 
-# PDO_OCI  ← corrigido
+# PDO_OCI 
 RUN echo "instantclient,/usr/lib/oracle/21/client64/lib" | pecl install pdo_oci \
     && docker-php-ext-enable pdo_oci
 

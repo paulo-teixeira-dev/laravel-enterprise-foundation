@@ -27,7 +27,7 @@ jobs:
         run: cp environments/.env.dev .env
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer install --ignore-platform-req=ext-oci8
 
       - name: Generate APP_KEY
         run: php artisan key:generate
